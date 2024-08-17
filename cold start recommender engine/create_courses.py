@@ -1,0 +1,125 @@
+import pandas as pd
+
+# Sample data for 30 courses
+data = {
+    'course': [
+        'Pandas for Data Science',
+        'Java for Software Development',
+        'Introduction to CyberSecurity',
+        'Machine Learning with Python',
+        'Advanced Data Structures in C++',
+        'Web Development with Django',
+        'Data Visualization with Tableau',
+        'Deep Learning with TensorFlow',
+        'Intro to SQL for Data Analysis',
+        'Cloud Computing with AWS',
+        'Big Data with Hadoop',
+        'Mobile App Development with Flutter',
+        'DevOps with Docker and Kubernetes',
+        'Natural Language Processing with NLTK',
+        'Introduction to Blockchain',
+        'Robotics with ROS',
+        'React for Front-End Development',
+        'Agile Project Management',
+        'Software Testing with Selenium',
+        'Introduction to Rust Programming',
+        'CyberSecurity in IoT',
+        'Data Science with R',
+        'Full-Stack Development with MERN',
+        'Microservices Architecture',
+        'Game Development with Unity',
+        'Quantum Computing Fundamentals',
+        'Artificial Intelligence with Python',
+        'Network Security Essentials',
+        'Data Ethics and Privacy',
+        'Digital Marketing with Google Analytics'
+    ],
+    'tags': [
+        'Data Science, Python, Pandas',
+        'Software Development, Java',
+        'CyberSecurity, Information Security',
+        'Data Science, Machine Learning, Python',
+        'Data Structures, C++',
+        'Web Development, Django, Python',
+        'Data Visualization, Tableau, BI',
+        'Deep Learning, TensorFlow, AI',
+        'SQL, Data Analysis, Databases',
+        'Cloud Computing, AWS, DevOps',
+        'Big Data, Hadoop, Data Engineering',
+        'Mobile Development, Flutter, Dart',
+        'DevOps, Docker, Kubernetes',
+        'NLP, NLTK, Python',
+        'Blockchain, Cryptocurrency, Decentralization',
+        'Robotics, ROS, Automation',
+        'Web Development, React, JavaScript',
+        'Project Management, Agile, Scrum',
+        'Software Testing, Selenium, QA',
+        'Programming, Rust, Systems Programming',
+        'CyberSecurity, IoT, Embedded Systems',
+        'Data Science, R, Statistics',
+        'Web Development, MERN, Full-Stack',
+        'Microservices, Architecture, Software Development',
+        'Game Development, Unity, C#',
+        'Quantum Computing, Qiskit, IBM',
+        'Artificial Intelligence, Python, Machine Learning',
+        'Network Security, CyberSecurity, Networking',
+        'Data Ethics, Privacy, Compliance',
+        'Digital Marketing, Google Analytics, SEO'
+    ],
+    'description': [
+        'Pandas library basics',
+        'Java programming fundamentals',
+        'CyberSecurity essentials',
+        'Machine Learning techniques',
+        'Advanced C++ concepts',
+        'Building web apps with Django',
+        'Creating visualizations with Tableau',
+        'Deep Learning models using TensorFlow',
+        'SQL basics for data analysis',
+        'AWS cloud services overview',
+        'Processing big data with Hadoop',
+        'Building mobile apps with Flutter',
+        'DevOps practices with Docker & Kubernetes',
+        'Processing text data with NLTK',
+        'Basics of Blockchain technology',
+        'Introduction to robotics with ROS',
+        'Front-end development using React',
+        'Managing projects with Agile methodologies',
+        'Automating tests with Selenium',
+        'Systems programming with Rust',
+        'Security challenges in IoT devices',
+        'Data science workflows with R',
+        'Building full-stack applications with MERN',
+        'Microservices design principles',
+        'Creating games with Unity',
+        'Introduction to Quantum Computing',
+        'Building AI solutions with Python',
+        'Protecting networks from threats',
+        'Ethical considerations in data usage',
+        'Optimizing digital marketing strategies'
+    ],
+    'skill-level': [
+        'Beginner', 'Intermediate', 'Beginner', 'Intermediate', 'Advanced',
+        'Intermediate', 'Beginner', 'Advanced', 'Beginner', 'Intermediate',
+        'Advanced', 'Intermediate', 'Advanced', 'Intermediate', 'Beginner',
+        'Intermediate', 'Intermediate', 'Beginner', 'Intermediate', 'Advanced',
+        'Advanced', 'Intermediate', 'Advanced', 'Intermediate', 'Advanced',
+        'Advanced', 'Intermediate', 'Beginner', 'Beginner', 'Intermediate'
+    ],
+    'certification': [
+        'Specialization', 'Professional Certificate', 'Specialization', 'Professional Certificate', 'Professional Certificate',
+        'Specialization', 'Specialization', 'Professional Certificate', 'Specialization', 'Professional Certificate',
+        'Professional Certificate', 'Specialization', 'Professional Certificate', 'Specialization', 'Specialization',
+        'Professional Certificate', 'Professional Certificate', 'Specialization', 'Professional Certificate', 'Specialization',
+        'Professional Certificate', 'Specialization', 'Professional Certificate', 'Specialization', 'Professional Certificate',
+        'Specialization', 'Professional Certificate', 'Specialization', 'Specialization', 'Specialization'
+    ]
+}
+
+# Create DataFrame
+courses_df = pd.DataFrame(data)
+
+# Save DataFrame to CSV
+courses_df.to_csv('courses.csv', index=False)
+
+print("CSV file 'courses.csv' has been created successfully!")

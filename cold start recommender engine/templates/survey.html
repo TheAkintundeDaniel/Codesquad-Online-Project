@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Onboarding Survey</title>
+</head>
+<body>
+  <h1>Onboarding Survey</h1>
+  <form method="POST">
+      {{ form.hidden_tag() }}
+      {{ form.username.label }} {{ form.username(size=32) }}<br>
+      {{ form.interest.label }} {{ form.interest(size=32) }}<br>
+      {{ form.skill_level.label }} {{ form.skill_level() }}<br>
+      {{ form.goal.label }} {{ form.goal(size=32) }}<br>
+      {{ form.submit() }}
+  </form>
+</body>
+</html>
